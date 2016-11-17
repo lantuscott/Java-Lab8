@@ -39,15 +39,13 @@ public class Die
 	{
 		Die die1 = new Die();
 		Die die2 = new Die();
-		Die die3 = new Die();
 
 		System.out.printf("The value is : %d.\n", die1.getLastRoll());
 		System.out.printf("The value is : %d.\n", die2.getLastRoll());
-		System.out.printf("The value is : %d.\n", die3.getLastRoll());
 
 		System.out.println(die1.toString());
-		System.out.println(die2.toString());
-		System.out.println(die3.toString());
+		System.out.println("die2: "+die2);
+
 	}
 
 }

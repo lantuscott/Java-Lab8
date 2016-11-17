@@ -11,7 +11,7 @@ public class Card
 	
 	public Card(int num)
 	{
-		
+		this.cardValue = num;
 	}
 	
 	public Card(int rank, String suit)
@@ -21,22 +21,26 @@ public class Card
 	
 	public int getRank()
 	{
-		return 0;
+		return 1+cardValue%13;
 	}
 	
 	public String getSuit()
 	{
-		return "";
+		return this.SUITS[this.cardValue/13];
 	}
 	
 	public String toString()
 	{
-		return "";
+		return RANKS[this.getRank()-1]+" of "+this.getSuit();
 	}
 	
 	public static void main(String[] args)
 	{
-		
+		Card card1 = new Card(0);
+
+		System.out.println(card1.getRank());
+		System.out.println(card1.getSuit());
+		System.out.println(card1.toString());
 	}
 
 }
